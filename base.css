@@ -77,16 +77,44 @@
 }
 
 .ds-screen h2 {
-    font-size: clamp(11px, 1.4vw, 20px);
+    font-size: clamp(20px, 2.4vw, 34px);
     max-width: 96%;
 }
 
 .ds-screen h1 {
-    font-size: clamp(10px, 1vw, 14px);
+    font-size: clamp(16px, 1.8vw, 26px);
     margin-top: 8px;
     max-width: 96%;
 }
 
+#typing-text {
+    font-size: clamp(10px, 1.1vw, 15px);
+    line-height: 1.3;
+    margin-top: 8px;
+    max-width: 96%;
+}
+
+.ds-screen2 {
+    position: absolute;
+    left: 50%;
+    top: 57.5%;
+    transform: translateX(-48%);
+    width: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    z-index: 2;
+    padding: 4px 6px 10px;
+    box-sizing: border-box;
+}
+#typing-text2 {
+    font-size: clamp(10px, 1.1vw, 15px);
+    line-height: 1.3;
+    margin: 0;
+    max-width: 96%;
+}
 .dpad-group {
     display: none;
 }
