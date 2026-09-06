@@ -1,7 +1,156 @@
 .top-section {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: #fba9e1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 184, 247, 0.5);
     text-align: center;
-    width: 100%;
     color: #fa07de;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+.star {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.phone {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.nintendo-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(80vw, 760px);
+    z-index: 1;
+}
+
+.Nintendo-ds,
+.nintendo-ds {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ds-screen {
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%);
+    width: 42%;
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    z-index: 2;
+    padding: 18px 6px 10px;
+    box-sizing: border-box;
+}
+
+.ds-screen h2,
+.ds-screen h1 {
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.ds-screen h2 {
+    font-size: clamp(11px, 1.4vw, 20px);
+    max-width: 96%;
+}
+
+.ds-screen h1 {
+    font-size: clamp(10px, 1vw, 14px);
+    margin-top: 8px;
+    max-width: 96%;
+}
+
+.dpad-group {
+    display: none;
+}
+
+.ds-controls {
+    position: absolute;
+    right: 14%;
+    bottom: 18%;
+    width: 120px;
+    height: 120px;
+    z-index: 3;
+    pointer-events: none;
+    transform: none;
+}
+
+.control-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    color: #3e3e3e;
+    font-weight: 700;
+    font-size: 0.82rem;
+    line-height: 1;
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+    pointer-events: auto;
+    transition: transform 0.1s ease, background 0.1s ease;
+}
+
+.control-button:hover {
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.control-button:active,
+.control-button.active {
+    transform: scale(0.96);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.y-btn {
+    top: 2px;
+    left: 62px;
+}
+
+.x-btn {
+    left: 100px;
+    top: -38px;
+}
+
+.b-btn {
+    right: -17px;
+    top: 41px;
+}
+
+.a-btn {
+    left: 141px;
+    bottom: 82px;
 }
