@@ -90,7 +90,7 @@ const productCatalog = {
   definition: {
     name: "Leave-in for frizzkontroll og definisjon",
     description: "En leave-in eller stylingkrem som samler håret og demper frizz.",
-    image: "olaplex-oil.png"
+    image: "images/olaplex-oil.png"
   },
   repair: {
     name: "Reparerende hårkur",
@@ -127,7 +127,7 @@ const productCatalog = {
 let currentQuestionIndex = 0;
 const userAnswers = {};
 
-function renderAnswerText(selectedKey = null) {
+function renderAnswerText() {
   if (!answerOutput) return;
 
   const currentQuestion = questionBank[currentQuestionIndex];
@@ -144,41 +144,12 @@ function renderAnswerText(selectedKey = null) {
   questionLine.textContent = currentQuestion.question;
   answerOutput.appendChild(questionLine);
 
-  let currentIndex = 0;
-
-  function typeNextLine() {
-    if (currentIndex >= entries.length) return;
-
-    const [key, value] = entries[currentIndex];
+  entries.forEach(([key, value]) => {
     const line = document.createElement("div");
     line.className = "answer-line";
-
-    if (selectedKey && key === selectedKey) {
-      line.classList.add("selected");
-    }
-
+    line.textContent = `${key}. ${value}`;
     answerOutput.appendChild(line);
-
-    const fullText = `${key}. ${value}`;
-    let charIndex = 0;
-
-    const typeChar = () => {
-      line.textContent = fullText.slice(0, charIndex);
-      charIndex++;
-
-      if (charIndex <= fullText.length) {
-        setTimeout(typeChar, 24);
-        return;
-      }
-
-      currentIndex++;
-      setTimeout(typeNextLine, 100);
-    };
-
-    typeChar();
-  }
-
-  typeNextLine();
+  });
 }
 
 function getHairProfile() {

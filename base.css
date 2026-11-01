@@ -1,3 +1,9 @@
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
 .top-section {
     background-color: #fba9e1;
     position: relative;
@@ -14,9 +20,9 @@
 
 .star {
     position: absolute;
-    left: 40px;
+    left: clamp(12px, 2.8vw, 40px);
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1.15);
     width: 80px;
     height: auto;
     display: block;
@@ -24,9 +30,9 @@
 
 .phone {
     position: absolute;
-    right: 40px;
+    right: clamp(12px, 2.8vw, 40px);
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1.15);
     width: 80px;
     height: auto;
     display: block;
@@ -36,7 +42,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.15);
     width: min(80vw, 760px);
     z-index: 1;
 }
@@ -326,4 +332,10 @@
 .a-btn {
     left: 141px;
     bottom: 82px;
+}
+
+@media (max-height: 760px) {
+    .nintendo-wrapper {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
 }
