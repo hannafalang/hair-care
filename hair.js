@@ -85,7 +85,7 @@ const productCatalog = {
   moisture: {
     name: "Fuktighetsgivende leave-in",
     description: "En leave-in-balsam som gir ekstra fukt og mykhet.",
-    image: ""
+    image: "images/moisture.png"
   },
   definition: {
     name: "Leave-in for frizzkontroll og definisjon",
@@ -95,32 +95,32 @@ const productCatalog = {
   repair: {
     name: "Reparerende hårkur",
     description: "En styrkende hårkur som kan brukes jevnlig i slitte lengder.",
-    image: ""
+    image: "images/repair.png"
   },
   volume: {
     name: "Lett volumprodukt",
     description: "En lett mousse eller spray som gir løft uten å tynge håret.",
-    image: ""
+    image: "images/volume.png"
   },
   dryScalp: {
     name: "Mild, fuktighetsgivende sjampo",
     description: "En skånsom sjampo som rengjør uten å føles uttørkende.",
-    image: ""
+    image: "images/dry-scalp.png"
   },
   balancedScalp: {
     name: "Skånsom hverdagssjampo",
     description: "En mild sjampo til vanlig vask og en balansert hodebunn.",
-    image: ""
+    image: "images/balanced-scalp.png"
   },
   oilyScalp: {
     name: "Lett, balanserende sjampo",
     description: "En lett sjampo som rengjør hodebunnen uten tunge pleiestoffer.",
-    image: ""
+    image: "images/oily-scalp.png"
   },
   sensitiveScalp: {
     name: "Parfymefri, mild sjampo",
     description: "Et skånsomt alternativ for en hodebunn som lett blir irritert.",
-    image: ""
+    image: "images/sensitive-scalp.png"
   }
 };
 
