@@ -115,6 +115,37 @@
     margin: 0;
     max-width: 96%;
 }
+
+.answer-output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+.answer-question {
+    font-size: clamp(10px, 1.1vw, 15px);
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #d1008d;
+}
+
+.answer-line {
+    font-size: clamp(10px, 1.1vw, 15px);
+    line-height: 1.3;
+    color: #000000;
+    min-height: 1.3em;
+}
+
+.answer-line.selected {
+    color: #d1008d;
+    font-weight: 700;
+}
+
 .dpad-group {
     display: none;
 }
