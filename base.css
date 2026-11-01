@@ -99,16 +99,26 @@
     left: 50%;
     top: 57.5%;
     transform: translateX(-48%);
-    width: 42%;
+    width: 44%;
+    height: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     color: #000000;
     z-index: 2;
     padding: 4px 6px 10px;
     box-sizing: border-box;
+    overflow: hidden;
 }
+
+.ds-screen2 > div {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
 #typing-text2 {
     font-size: clamp(10px, 1.1vw, 15px);
     line-height: 1.3;
@@ -120,10 +130,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 3px;
     margin-top: 8px;
     width: 100%;
     text-align: left;
+}
+
+.answer-progress {
+    width: 100%;
+    font-size: clamp(8px, 0.9vw, 12px);
+    line-height: 1.2;
+    color: #6d3260;
+    text-align: center;
+    margin-bottom: 3px;
 }
 
 .answer-question {
@@ -132,6 +151,14 @@
     font-weight: 700;
     margin-bottom: 6px;
     color: #d1008d;
+}
+
+.answer-line,
+.answer-summary,
+.product-description,
+.result-profile,
+.result-tip {
+    overflow-wrap: anywhere;
 }
 
 .answer-line {
@@ -144,6 +171,93 @@
 .answer-line.selected {
     color: #d1008d;
     font-weight: 700;
+}
+
+.answer-summary {
+    width: 100%;
+    font-size: clamp(8px, 0.9vw, 12px);
+    line-height: 1.35;
+    margin: 2px 0 6px;
+}
+
+.result-profile {
+    width: 100%;
+    font-size: clamp(9px, 1vw, 13px);
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.recommendation-heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.product-recommendation {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgba(209, 0, 141, 0.25);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.product-title {
+    width: 100%;
+    font-size: clamp(9px, 1vw, 13px);
+    line-height: 1.25;
+    font-weight: 700;
+    color: #d1008d;
+    margin-bottom: 4px;
+}
+
+.product-image,
+.product-image-placeholder {
+    display: block;
+    width: min(100%, 100px);
+    height: 52px;
+    margin: 0 auto 4px;
+    object-fit: contain;
+}
+
+.product-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+    border: 1px dashed rgba(209, 0, 141, 0.4);
+    color: #6d3260;
+    font-size: clamp(8px, 0.8vw, 10px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.product-description,
+.result-tip {
+    font-size: clamp(8px, 0.9vw, 12px);
+    line-height: 1.3;
+}
+
+.result-tip {
+    margin: 5px 0;
+}
+
+.restart-button {
+    margin: 5px auto 0;
+    padding: 4px 8px;
+    border: 1px solid #d1008d;
+    border-radius: 5px;
+    background: #fff;
+    color: #d1008d;
+    font: inherit;
+    font-size: clamp(9px, 0.9vw, 12px);
+    cursor: pointer;
+}
+
+.restart-button[hidden] {
+    display: none;
 }
 
 .dpad-group {
